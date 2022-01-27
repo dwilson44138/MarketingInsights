@@ -1,0 +1,9 @@
+{
+	"name": "DWilson-DataFactory",
+	"location": "northcentralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ee96f8c3-2ac7-443b-80ef-bdd4f6903dff",
+		"tenantId": "57165489-070e-40a6-8854-e75bf18f50be"
+	}
+}
