@@ -1,0 +1,133 @@
+{
+	"name": "AzureSynapseAnalyticsTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "triggerk",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "sourcek",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "sourcecontentk",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "sourceaddressk",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "sourceconsumerk",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "sourceprevaddressk",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "flag_interstate_move",
+				"type": "varchar"
+			},
+			{
+				"name": "phonek",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "speedeon_id",
+				"type": "varchar"
+			},
+			{
+				"name": "trigger_date",
+				"type": "varchar"
+			},
+			{
+				"name": "trigger_year",
+				"type": "varchar"
+			},
+			{
+				"name": "trigger_month",
+				"type": "varchar"
+			},
+			{
+				"name": "trigger_day",
+				"type": "varchar"
+			},
+			{
+				"name": "event_date",
+				"type": "varchar"
+			},
+			{
+				"name": "event_year",
+				"type": "varchar"
+			},
+			{
+				"name": "event_month",
+				"type": "varchar"
+			},
+			{
+				"name": "customer_updated",
+				"type": "varchar"
+			},
+			{
+				"name": "timeline_source",
+				"type": "varchar"
+			},
+			{
+				"name": "suppress",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "suppress_reason",
+				"type": "varchar"
+			},
+			{
+				"name": "fname_source",
+				"type": "varchar"
+			},
+			{
+				"name": "lname_source",
+				"type": "varchar"
+			},
+			{
+				"name": "short_first",
+				"type": "varchar"
+			},
+			{
+				"name": "short_last",
+				"type": "varchar"
+			},
+			{
+				"name": "short_addr_num",
+				"type": "varchar"
+			},
+			{
+				"name": "short_addr_string",
+				"type": "varchar"
+			},
+			{
+				"name": "short_zip",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "source_neustar_newmover"
+		}
+	}
+}
