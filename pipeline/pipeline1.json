@@ -1,0 +1,115 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "TEST Stored Procedure",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[sp_source_test_newmover]",
+					"storedProcedureParameters": {
+						"trigger_date": {
+							"value": {
+								"value": "@utcnow('yyyy-MM-dd')",
+								"type": "Expression"
+							},
+							"type": "DateTime"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "asynapseMarketingInsights",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Cleanse Initial",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "TEST Stored Procedure",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[sp_source_standard_cleanse_initial]",
+					"storedProcedureParameters": {
+						"file_source_destination": {
+							"value": "test_newmover",
+							"type": "String"
+						},
+						"source_type": {
+							"value": "NEWMOVER",
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "asynapseMarketingInsights",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "New Mover Staging",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Cleanse Initial",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[sp_source_standard_newmover_staging_new]",
+					"storedProcedureParameters": {
+						"source": {
+							"value": "test_newmover",
+							"type": "String"
+						},
+						"sourcecode": {
+							"value": "19",
+							"type": "String"
+						},
+						"sourcecontentcode": {
+							"value": "M",
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "asynapseMarketingInsights",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
