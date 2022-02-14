@@ -1,0 +1,7 @@
+{
+	"name": "AzureDataLakeStorage1",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/ebcf966c-31a5-468b-ba6f-3ab0777856a8/resourceGroups/northcentralproductionrg/providers/Microsoft.Storage/storageAccounts/speedeondatalake",
+		"groupId": "dfs"
+	}
+}
