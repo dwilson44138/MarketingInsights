@@ -1,0 +1,10 @@
+{
+	"name": "EnduranceDirect_Custom",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://speedeondatalake.dfs.core.windows.net"
+		}
+	}
+}
