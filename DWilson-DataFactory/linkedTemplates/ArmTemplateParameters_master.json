@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "DWilson-DataFactory"
+		},
+		"asynapseMarketingInsights_connectionString": {
+			"value": ""
+		},
+		"lsMarketingInsights_functionKey": {
+			"value": ""
+		},
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+			"value": "https://speedeondatalake.blob.core.windows.net"
+		},
+		"EnduranceDirect_Custom_properties_typeProperties_url": {
+			"value": "https://speedeondatalake.dfs.core.windows.net"
+		},
+		"lsMarketingInsights_properties_typeProperties_functionAppUrl": {
+			"value": "https://marketinginsights.azurewebsites.net"
+		},
+		"AzureDataLakeStorage1_properties_privateLinkResourceId": {
+			"value": "/subscriptions/ebcf966c-31a5-468b-ba6f-3ab0777856a8/resourceGroups/northcentralproductionrg/providers/Microsoft.Storage/storageAccounts/speedeondatalake"
+		},
+		"AzureDataLakeStorage1_properties_groupId": {
+			"value": "dfs"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
