@@ -7,7 +7,7 @@
 		"typeProperties": {
 			"functionAppUrl": "https://marketinginsights.azurewebsites.net",
 			"authentication": "Anonymous",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQERBMjdDODI1LTk1MzktNEZGNy1CRjA2LTIwNEQ1ODhFMjEzQV9kMzM2MmM5NS1iZGI0LTQ1ZjctYjZhYi1mYTdiMzEyMzJlOTYiDQp9"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQERBMjdDODI1LTk1MzktNEZGNy1CRjA2LTIwNEQ1ODhFMjEzQV85MjJjYTA0NS0zNGRiLTRkMzItYmRmNS0zYmE2N2VmMWYyYzIiDQp9"
 		}
 	}
 }
